@@ -13,35 +13,79 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="410dp"
-        android:layout_height="354dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="400dp"
+        android:layout_height="558dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape"
         android:orientation="vertical"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299">
+        app:layout_constraintVertical_bias="0.0">
 
-
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingBottom="2dp"
+            android:text="Nguyễn Trúc Quỳnh \n 22115053122335"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064" />
         <TextView
             android:id="@+id/loginText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:paddingBottom="20dp"
-            android:text="@string/login"
+            android:paddingBottom="2dp"
+            android:text="Đăng kí"
             android:textAlignment="center"
-            android:textColor="@color/purple"
+            android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.05"
             tools:layout_editor_absoluteX="16dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custin_edittext"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
+            android:hint="Tên của bạn"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <EditText
+            android:id="@+id/sdt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custin_edittext"
+            android:drawableStart="@drawable/baseline_local_phone_24"
+            android:drawablePadding="8dp"
+            android:hint="Số điện thoại"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="120dp" />
 
         <EditText
             android:id="@+id/username"
@@ -74,12 +118,28 @@
             tools:layout_editor_absoluteX="24dp"
             tools:layout_editor_absoluteY="212dp" />
 
+        <EditText
+            android:id="@+id/passwordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custin_edittext"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:hint="Nhập lại password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/cardview_dark_background"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="212dp" />
+
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="@color/purple"
-            android:text="@string/login"
+            android:text="Đăng kí"
             android:textSize="18sp"
             app:cornerRadius="20dp" />
 
@@ -87,23 +147,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
         android:layout_width="401dp"
-        android:layout_height="118dp"
-        android:layout_marginBottom="104dp"
+        android:layout_height="93dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.891">
 
         <TextView
-            android:id="@+id/dangki"
+            android:id="@+id/moreLogin"
             android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="Bạn chưa có tài khoản? Đăng kí"
+            android:text="Bạn có thể đăng nhập bằng"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="133dp"
             tools:layout_editor_absoluteY="561dp" />
@@ -153,7 +214,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textShow"
+        android:id="@+id/showDangKi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -162,19 +223,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nguyễn Trúc Quỳnh \n 22115053122335"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.952" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
